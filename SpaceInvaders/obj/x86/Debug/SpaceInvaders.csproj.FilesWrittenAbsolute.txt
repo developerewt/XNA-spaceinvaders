@@ -1,0 +1,13 @@
+/home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/bin/Debug/OpenTK.dll.config
+/home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/bin/Debug/Tao.Sdl.dll.config
+/home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/bin/Debug/SpaceInvaders.exe.mdb
+/home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/bin/Debug/SpaceInvaders.exe
+/home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/obj/x86/Debug/SpaceInvaders.exe
+/home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/obj/x86/Debug/SpaceInvaders.exe.mdb
+/home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/bin/Debug/MonoGame.Framework.dll
+/home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/bin/Debug/OpenTK.dll
+/home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/bin/Debug/Tao.Sdl.dll
+/home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/bin/Debug/Content/nave.png
+/home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/bin/Debug/Content/bullet.png
+/home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/bin/Debug/Content/enemie.png
