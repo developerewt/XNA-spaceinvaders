@@ -54,37 +54,27 @@ namespace SpaceInvaders
 			
 		}
 
-		private void Circular2(GameTime gameTime){
+		private void SpaceInvadersMovement(GameTime gameTime){
 
 			Random rnd = new Random();
-			int move = rnd.Next(8, 9);
+			int move = rnd.Next(8, 9); // speed
 
 			float time = (float)gameTime.TotalGameTime.TotalSeconds; 
 			float speed = move;
 			float radius = 10;
-			//Center origin position x,y
+
 			if ((originX == limitWidth) || (originX == 0)) {
 				directionX *= -1;
 				originX = originX + directionX;
 				originY += 20;
-				Vector2 origin = new Vector2(originX,originY);
-
-				position.Y = (float)(Math.Sin (time * speed) * radius + origin.Y);
-
 			} else {
 				originX=originX+directionX;
-				Vector2 origin = new Vector2(originX,originY);
-				position.Y = (float)(Math.Sin (time * speed) * radius + origin.Y);
 			
 			}
+			//Center origin position x,y
+			Vector2 origin = new Vector2(originX,originY);
+			position.Y = (float)(Math.Sin (time * speed) * radius + origin.Y);
 			position.X=originX;
-
-
-
-
-			//position.X = (float)(Math.Cos(time * speed) * radius + origin.X);
-
-
 		}
 
 
