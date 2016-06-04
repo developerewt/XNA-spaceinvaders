@@ -16,8 +16,8 @@ namespace SpaceInvaders
 	{
 		GraphicsDeviceManager graphics;
 		SpriteBatch spriteBatch;
-		public Nave nave;
-		public Enemie enemie;
+		int enemySize = 100;
+
 
 		public Game1 ()
 		{
@@ -37,13 +37,17 @@ namespace SpaceInvaders
 			// TODO: Add your initialization logic here
 			// Nave image.
 
-			nave = new Nave (this);
+			Nave nave = new Nave (this);
 
 			this.Components.Add (nave);
 
-			enemie = new Enemie (this);
+			for (int x = 1; x <= this.GraphicsDevice.Viewport.Width; x += enemySize)
+				for (int y = 0; y <= this.GraphicsDevice.Viewport.Height/2; y += enemySize) {
+					this.Components.Add (new Enemie (this, x, y));
+					Console.Write ("(" + x + "," + y + ")");
+				}
+		
 
-			this.Components.Add (enemie);
 
 			//bullet.Init (this);
 

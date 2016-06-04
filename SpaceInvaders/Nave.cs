@@ -52,7 +52,7 @@ namespace SpaceInvaders
 
 
 			if (currentKBState.IsKeyDown (Keys.LeftControl) && !previousKBState.IsKeyDown (Keys.LeftControl)) {
-				this.game.Components.Add (new Bullet (this.game));
+				this.game.Components.Add (new Bullet (this.game,position));
 
 			}
 

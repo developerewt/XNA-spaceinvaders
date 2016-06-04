@@ -24,8 +24,10 @@ namespace SpaceInvaders
 
 
 
-		public Enemie (Game1 game1) : base (game1)
+		public Enemie (Game1 game1,int originX,int originY) : base (game1)
 		{
+			this.originX = originX;
+			this.originY = originY;
 			this.game = game1;
 
 			//should only ever be one player, all value defaults set in Initialize()
@@ -65,12 +67,9 @@ namespace SpaceInvaders
 
 			if ((originX == limitWidth) || (originX == 0)) {
 				directionX *= -1;
-				originX = originX + directionX;
-				originY += 20;
-			} else {
-				originX=originX+directionX;
-			
-			}
+				originY += 50;
+			} 
+			originX += directionX;
 			//Center origin position x,y
 			Vector2 origin = new Vector2(originX,originY);
 			position.Y = (float)(Math.Sin (time * speed) * radius + origin.Y);
@@ -81,7 +80,7 @@ namespace SpaceInvaders
 		public override void Update (GameTime gameTime)
 		{
 			
-			this.Circular2 (gameTime);
+			this.SpaceInvadersMovement (gameTime);
 
 		}
 
@@ -96,12 +95,10 @@ namespace SpaceInvaders
 		{
 			base.Initialize ();
 
-			enemie = Game.Content.Load<Texture2D> ("enemie"); 
+			enemie = Game.Content.Load<Texture2D> ("enemie0"); 
 			velocity = new Vector2 (1, 1);
 			position.Y =  (enemie.Width + enemie.Width / 2);
 			position.X = Game.GraphicsDevice.Viewport.Width/ 2 - enemie.Width;
-			originX = 1;
-			originY = 0;
 			directionX =1;
 			limitHeight = game.GraphicsDevice.Viewport.Height - (enemie.Height);
 			limitWidth = game.GraphicsDevice.Viewport.Width - (enemie.Width);

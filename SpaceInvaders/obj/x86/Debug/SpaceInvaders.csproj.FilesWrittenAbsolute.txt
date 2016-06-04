@@ -11,3 +11,4 @@
 /home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/bin/Debug/Content/nave.png
 /home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/bin/Debug/Content/bullet.png
 /home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/bin/Debug/Content/enemie.png
+/home/wilfredor/Projets/SpaceInvaders/SpaceInvaders/SpaceInvaders/bin/Debug/Content/enemie0.png

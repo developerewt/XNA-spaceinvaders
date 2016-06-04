@@ -15,9 +15,9 @@ namespace SpaceInvaders
 		SpriteBatch spriteBatch;
 		public Boolean delete;
 
-		public Bullet (Game1 game) : base (game)
+		public Bullet (Game1 game,Vector2 position) : base (game)
 		{
-			navePosition = game.nave.position;
+			navePosition = position;
 
 			//should only ever be one player, all value defaults set in Initialize()
 		}
