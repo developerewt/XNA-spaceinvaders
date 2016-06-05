@@ -15,14 +15,13 @@ namespace SpaceInvaders
 		Game1 game;
 		int originX;
 		int originY;
+		public int Width;
+		public int Height;
 		int directionX;
 		SpriteBatch spriteBatch;
 		int limitHeight;
 		int limitWidth;
 		int numberOfTicks = 0;
-
-
-
 
 		public Enemie (Game1 game1,int originX,int originY) : base (game1)
 		{
@@ -97,6 +96,8 @@ namespace SpaceInvaders
 
 			enemie = Game.Content.Load<Texture2D> ("enemie0"); 
 			velocity = new Vector2 (1, 1);
+			this.Width = enemie.Width;
+			this.Height = enemie.Height;
 			position.Y =  (enemie.Width + enemie.Width / 2);
 			position.X = Game.GraphicsDevice.Viewport.Width/ 2 - enemie.Width;
 			directionX =1;

@@ -37,17 +37,17 @@ namespace SpaceInvaders
 			// TODO: Add your initialization logic here
 			// Nave image.
 
-			Nave nave = new Nave (this);
 
-			this.Components.Add (nave);
 
 			for (int x = 1; x <= this.GraphicsDevice.Viewport.Width; x += enemySize)
 				for (int y = 0; y <= this.GraphicsDevice.Viewport.Height/2; y += enemySize) {
 					this.Components.Add (new Enemie (this, x, y));
-					Console.Write ("(" + x + "," + y + ")");
 				}
-		
+		    
+			//this.Components.Add (new Enemie (this, 1, 0));
+			Nave nave = new Nave (this);
 
+			this.Components.Add (nave);
 
 			//bullet.Init (this);
 
