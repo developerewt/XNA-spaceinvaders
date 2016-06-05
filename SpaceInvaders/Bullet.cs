@@ -27,7 +27,6 @@ namespace SpaceInvaders
 		}
 		private void checkCollision() {
 	
- 
 			int countComp = Game.Components.Count;
 			Enemie enemie = null;
 			//For each enemy
@@ -37,27 +36,39 @@ namespace SpaceInvaders
 					enemie = ((Enemie)Game.Components [i]);
 					//Check bullet collition with Enemy
 					if (
-						((enemie.position.X<=position.X)&&(position.X<=(enemie.position.X+enemie.Width))) &&
-						((enemie.position.Y<=position.Y)&&(position.Y<=(enemie.position.Y+enemie.Width)))
-					   )
+						((enemie.position.X <= position.X) && (position.X <= (enemie.position.X + enemie.Width))) &&
+						((enemie.position.Y <= position.Y) && (position.Y <= (enemie.position.Y + enemie.Width)))) {
+						//Delete Enemy
+						Game.Components.RemoveAt (i);
 
-					Game.Components.RemoveAt (i);
+						//Delete bullet
+						this.delete = true;
+						Game.Components.Remove (this);
+
+
+						return;
+					}
 				}
 
 			}
+
 		}
 
 		public override void Update (GameTime gameTime)
 		{
+			
 			this.checkCollision ();
 
-			if ((position.Y >= -this.bullet.Height))
+			if (((position.Y >= -this.bullet.Height)))
 				position.Y -= velocity.Y;
 			else {
+				
+
 				this.delete = true;
 				Game.Components.Remove (this);
 				//this = null;
 				//this.SetInitPosition (navePosition);
+				
 			}
 			base.Update (gameTime);
 		}
