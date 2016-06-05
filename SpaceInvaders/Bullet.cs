@@ -38,7 +38,7 @@ namespace SpaceInvaders
 					//Check bullet collition with Enemy
 					if (
 						((enemie.position.X<=position.X)&&(position.X<=(enemie.position.X+enemie.Width))) &&
-						((enemie.position.Y>=position.Y)&&(position.Y<=(enemie.position.Y+enemie.Width)))
+						((enemie.position.Y<=position.Y)&&(position.Y<=(enemie.position.Y+enemie.Width)))
 					   )
 
 					Game.Components.RemoveAt (i);
