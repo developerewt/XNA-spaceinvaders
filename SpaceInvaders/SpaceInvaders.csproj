@@ -50,6 +50,7 @@
     <Compile Include="Bullet.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Enemie.cs" />
+    <Compile Include="Collision.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Icon.png" />

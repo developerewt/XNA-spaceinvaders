@@ -18,6 +18,7 @@ namespace SpaceInvaders
 		KeyboardState previousKBState;
 		int limitHeight;
 		int limitWidth;
+		public int lives;
 
 
 		public Nave (Game1 game1) : base (game1)
@@ -34,7 +35,12 @@ namespace SpaceInvaders
 			previousKBState = currentKBState;
 			currentKBState = Keyboard.GetState ();
 
+			//Check collision
+			Collision collision = new Collision (Game);
+			if (collision.checkCollision (position))
+				Game.Components.Remove (this);
 
+			//Movement
 			if (currentKBState.IsKeyDown (Keys.Left)) {
 				if (position.X >= 0)
 					position.X -= velocity.X;
@@ -50,7 +56,7 @@ namespace SpaceInvaders
 			}
 
 
-
+			//Fire
 			if (currentKBState.IsKeyDown (Keys.LeftControl) && !previousKBState.IsKeyDown (Keys.LeftControl)) {
 				this.game.Components.Add (
 					new Bullet (
@@ -82,6 +88,7 @@ namespace SpaceInvaders
 			position.X = Game.GraphicsDevice.Viewport.Width / 2 - nave.Width;
 			limitHeight = game.GraphicsDevice.Viewport.Height - (nave.Height);
 			limitWidth = game.GraphicsDevice.Viewport.Width - (nave.Width);
+			this.lives = 1;
 
 		}
 
